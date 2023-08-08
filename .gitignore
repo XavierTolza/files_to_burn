@@ -1,0 +1,44 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.dll
+*.so
+
+# Compiled Static libraries
+*.lib
+*.a
+
+# Executables
+*.exe
+
+# CMake build directory
+/build/
+
+# Visual Studio Code - .vscode directory
+.vscode/
+
+# macOS - system files
+.DS_Store
+
+# Linux - core dumps and temp files
+core
+*.swp
+*~
+
+# Compiled binaries
+/bin/
+
+# Dependencies
+/deps/
+
+# User-specific files
+.idea/
+*.user
+
+# Compiled output
+/out/
+
+# Ignore any files named ".gitignore"
+!.gitignore
