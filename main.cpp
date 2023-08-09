@@ -268,16 +268,12 @@ int main(int argc, char *argv[])
     files_set_t burnt_files;
     splitmd5(burnt, burnt_md5, burnt_files);
 
-#ifdef DEBUG
-    std::cout << "Loaded " << burnt.size() << " md5s" << std::endl;
-#endif
+    std::cerr << "Loaded " << burnt.size() << " md5s" << std::endl;
 
     // list files
     files_t files = findFiles(args.folderPath, args.hidden);
 
-#ifdef DEBUG
-    std::cout << "Found " << files.size() << " files" << std::endl;
-#endif
+    std::cerr << "Found " << files.size() << " files" << std::endl;
 
     // load a file containing paths to folders to ignore
     files_set_t ignore;
@@ -294,9 +290,9 @@ int main(int argc, char *argv[])
         }
     }
 
-#ifdef DEBUG
-    std::cout << "Loaded " << ignore.size() << " ignored folders" << std::endl;
-#endif
+    std::cerr << "Loaded " << ignore.size() << " ignore rules" << std::endl;
+    std::cerr << "Processing files" << std::endl;
+
 
     // process files
     check_files(files, burnt_md5, burnt_files, ignore, args.folderPath, args.numThreads);

@@ -22,4 +22,4 @@ target_link_libraries(files_to_burn PRIVATE pthread)
 install(TARGETS files_to_burn DESTINATION bin)
 
 # define DEBUG macro
-target_compile_definitions(files_to_burn PRIVATE DEBUG)
+# target_compile_definitions(files_to_burn PRIVATE DEBUG)
